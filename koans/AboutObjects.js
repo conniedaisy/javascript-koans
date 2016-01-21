@@ -13,7 +13,7 @@ describe("About Objects", function() {
 
     it("should confirm that properties are case sensitive", function() {
       expect(meglomaniac.henchwoman).toBe("Harley");
-      expect(meglomaniac.henchWoman).toBe("Harley");
+      expect(meglomaniac.henchWoman).toBe(undefined);
     });
   });
   
@@ -27,9 +27,9 @@ describe("About Objects", function() {
           Array(noOfBrains + 1).join(" " + this.mastermind);
       }
     };
-   // "They are Pinky and the Array(4+1) 5 Brain"
+   // "They are Pinky and the Array(4).join("Brain") + 1"
     var battleCry = meglomaniac.battleCry(4);
-    expect("They are Pinky and the 5 Brain").toMatch(battleCry);
+    expect("They are Pinky and the Brain Brain Brain Brain").toMatch(battleCry);
   });
 
   it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
@@ -67,20 +67,20 @@ describe("About Objects", function() {
     it("should not have the detonator however", function() {
       var hasDetonator = "theDetonator" in meglomaniac;
      
-      expect(hasDetonator).toBe(null);
+      expect(hasDetonator).toBe(false);
     });    
   });
 
   it("should know that properties can be added and deleted", function() {
     var meglomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
-    expect("secretary" in meglomaniac).toBe(null);
+    expect("secretary" in meglomaniac).toBe(false);
 
     meglomaniac.secretary = "Agent Smith";
     expect("secretary" in meglomaniac).toBe("Agent Smith");
     
     delete meglomaniac.henchman;
-    expect("henchman" in meglomaniac).toBe(null);
+    expect("henchman" in meglomaniac).toBe(false);
   });
 
 
@@ -94,7 +94,7 @@ describe("About Objects", function() {
     var colouredCircle = new Circle(5);
     colouredCircle.colour = "red";
     
-    expect(simpleCircle.colour).toBe(null);
+    expect(simpleCircle.colour).toBe(undefined);
     expect(colouredCircle.colour).toBe("red");
   
     Circle.prototype.describe = function() {
