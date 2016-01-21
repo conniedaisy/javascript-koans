@@ -32,12 +32,12 @@ describe("About Arrays", function() {
   it("should understand array length", function() {
     var fourNumberArray = [1, 2, 3, 4];
 
-    expect(fourNumberArray.length).toBe(3);
+    expect(fourNumberArray.length).toBe(4);
     fourNumberArray.push(5, 6);
-    expect(fourNumberArray.length).toBe(5);
+    expect(fourNumberArray.length).toBe(6);
 
     var tenEmptyElementArray = new Array(10); 
-    expect(tenEmptyElementArray.length).toBe(10);
+    expect(tenEmptyElementArray.length).toBe(11);
 
     tenEmptyElementArray.length = 5;
     expect(tenEmptyElementArray.length).toBe(5);
@@ -52,7 +52,7 @@ describe("About Arrays", function() {
     expect(array.slice(2, 20)).toEqual(["and", "jelly"]);
     expect(array.slice(3, 0)).toEqual("jelly");
     expect(array.slice(3, 100)).toEqual("jelly");
-    expect(array.slice(5, 1)).toEqual([]);
+    expect(array.slice(5, 1)).toEqual(["and"]);
   });
 
   it("should know array references", function() {
