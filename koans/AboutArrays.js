@@ -37,7 +37,7 @@ describe("About Arrays", function() {
     expect(fourNumberArray.length).toBe(6);
 
     var tenEmptyElementArray = new Array(10); 
-    expect(tenEmptyElementArray.length).toBe(11);
+    expect(tenEmptyElementArray.length).toBe(10);
 
     tenEmptyElementArray.length = 5;
     expect(tenEmptyElementArray.length).toBe(5);
@@ -48,11 +48,11 @@ describe("About Arrays", function() {
     
     expect(array.slice(0, 1)).toEqual(["peanut"]);
     expect(array.slice(0, 2)).toEqual(["peanut", "butter"]);
-    expect(array.slice(2, 2)).toEqual(["and"]);
+    expect(array.slice(2, 2)).toEqual([]);
     expect(array.slice(2, 20)).toEqual(["and", "jelly"]);
     expect(array.slice(3, 0)).toEqual("jelly");
     expect(array.slice(3, 100)).toEqual("jelly");
-    expect(array.slice(5, 1)).toEqual(["and"]);
+    expect(array.slice(5, 1)).toEqual([]);
   });
 
   it("should know array references", function() {
