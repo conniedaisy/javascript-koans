@@ -2,12 +2,21 @@ describe("About Expects", function() {
 
   // We shall contemplate truth by testing reality, via spec expectations.  
   it("should expect true", function() {
-    expect(1).toBeTruthy(); // This should be true
+<<<<<<< HEAD
+    expect(true).toBeTruthy(); // This should be true
   });
 
   // To understand reality, we must compare our expectations against reality.
   it("should expect equality", function() { 
 	  var expectedValue = 2;
+=======
+    expect(true).toBeTruthy(); // This should be true
+  });
+
+  // To understand reality, we must compare our expectations against reality.
+  it("should expect equality", function(FILL_ME_IN) { 
+	  var expectedValue = FILL_ME_IN;
+>>>>>>> master
 	  var actualValue = 1 + 1;
 	
 	  expect(actualValue === expectedValue).toBeTruthy();
