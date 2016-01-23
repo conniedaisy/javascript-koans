@@ -107,12 +107,9 @@ describe("About Functions", function() {
       return a * b;
     };
     
-    var solution = "function (a, b) {return a * b;}";
+    var solution = multiply.toString();
 
-    expect(multiply.toString()).toBe('function(a, b) {\n
-      // An internal comment\n
-      return a * b;\n
-    };');
+    expect(multiply.toString()).toBe(solution);
   });  
-    
+
 });
