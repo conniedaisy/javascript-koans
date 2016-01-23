@@ -23,7 +23,7 @@ describe("About Functions", function() {
     }
     
     expect(getMessage()).toBe("Outer");
-    expect(overrideMessage()).toBe("Outer");
+    expect(overrideMessage()).toBe("Inner");
     expect(message).toBe("Inner");
   });
 
