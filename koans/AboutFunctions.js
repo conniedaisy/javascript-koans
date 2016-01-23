@@ -107,8 +107,8 @@ describe("About Functions", function() {
       return a * b;
     };
     
-    var solution = "function(a, b) {
-      // An internal comment
+    var solution = "function(a, b) { \n
+      // An internal comment \n
       return a * b;
     };"
 
